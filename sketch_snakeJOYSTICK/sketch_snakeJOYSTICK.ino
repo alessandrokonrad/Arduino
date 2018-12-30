@@ -25,6 +25,7 @@ int food_x = rand() % 8;
 int food_y = rand() % 8;
 int length = 3;
 int c = 0;
+/* 64 is max length for 8 x 8 MATRIX */
 int coordinates[64][2];
 
 //movement
@@ -65,8 +66,6 @@ void setup() {
 void loop() {
   int xAxis = analogRead(XAXIS);
   int yAxis = analogRead(YAXIS);
-  int x_temp = x;
-  int y_temp = y;
   
   //user input
    if (xAxis > 600 && left == false) {
